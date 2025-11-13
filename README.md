@@ -5,41 +5,23 @@ Academic Collaboration Platform
 Bridging Academic Minds Through Intelligent Matching
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 📖 About
 
 AcademiaMatch is an AI-powered platform that matches researchers and faculty members based on their expertise and research interests using advanced semantic analysis. Find your next collaborator, co-author, or research partner with precision matching.
 
 ✨ Features
 
-•
-🤖 AI-Powered Matching - Uses Sentence Transformers for semantic similarity
+•🤖 AI-Powered Matching - Uses Sentence Transformers for semantic similarity
 
-•
-📊 Flexible CSV Upload - Works with any researcher dataset
+•📊 Flexible CSV Upload - Works with any researcher dataset
 
-•
-🎯 Top N Matching - Get exactly N matches per external researcher
+•🎯 Top N Matching - Get exactly N matches per external researcher
 
-•
-🔍 Similarity Threshold - Filter matches by quality score
+•🔍 Similarity Threshold - Filter matches by quality score
 
-•
-📥 Export Results - Download matches as CSV
+•📥 Export Results - Download matches as CSV
 
-•
-⚡ Real-time Processing - Get results in seconds
+•⚡ Real-time Processing - Get results in seconds
 
 🚀 Quick Start
 
@@ -61,14 +43,11 @@ streamlit run streamlit_app.py
 
 Deploy to Streamlit Cloud
 
-1.
-Fork this repository
+1. Fork this repository
 
-2.
-Go to share.streamlit.io
+2. Go to share.streamlit.io
 
-3.
-Create new app and select your forked repository
+3. Create a new app and select your forked repository
 
 4.
 Deploy!
@@ -97,87 +76,67 @@ Dr. Omar Yusuf,AI for Humanity Lab,Fair machine learning systems
 
 🛠️ Technology Stack
 
-•
-Frontend: Streamlit
+•Frontend: Streamlit
 
-•
-AI Engine: Sentence Transformers (all-MiniLM-L6-v2)
+•AI Engine: Sentence Transformers (all-MiniLM-L6-v2)
 
-•
-Similarity: Cosine Similarity
+•Similarity: Cosine Similarity
 
-•
-Data Processing: Pandas, NumPy, scikit-learn
+•Data Processing: Pandas, NumPy, scikit-learn
 
 🎯 Use Cases
 
-•
-Research Collaboration - Match researchers for joint projects
+• Research Collaboration - Match researchers for joint projects
 
-•
-Faculty Recruitment - Match candidates to positions
+• Faculty Recruitment - Match candidates to positions
 
-•
-Student-Advisor Matching - Pair students with suitable advisors
+• Student-Advisor Matching - Pair students with suitable advisors
 
-•
-Grant Partnerships - Find collaborators for funding opportunities
+• Grant Partnerships - Find collaborators for funding opportunities
 
-•
-Conference Networking - Connect attendees with similar interests
+• Conference Networking - Connect attendees with similar interests
 
 📊 How It Works
 
-1.
-Upload two CSV files (internal and external datasets)
+1. Upload two CSV files (internal and external datasets)
 
-2.
-Configure matching parameters (Top N, Threshold)
+2. Configure matching parameters (Top N, Threshold)
 
-3.
-Run the AI matching algorithm
+3. Run the AI matching algorithm
 
-4.
-View results in formatted table
+4. View results in a formatted table
 
-5.
-Download matches as CSV
+5. Download matches as CSV
 
 🤖 AI Technology
 
 AcademiaMatch uses Sentence Transformers, a state-of-the-art deep learning model that:
 
-•
-Creates 384-dimensional semantic embeddings
+• Creates 384-dimensional semantic embeddings
 
-•
-Understands context and meaning beyond keywords
+• Understands context and meaning beyond keywords
 
-•
-Captures relationships between research concepts
+• Captures relationships between research concepts
 
-•
-Achieves high accuracy in semantic matching
+• Achieves high accuracy in semantic matching
 
 📈 Output Format
 
 Results include:
 
-•
-external_name - External researcher name
+• external_name - External researcher name
 
-•
-best_internal_match - Matched internal researcher
+• best_internal_match - Matched internal researcher
 
-•
-similarity_score - Match quality (0.0 - 1.0)
+• similarity_score - Match quality (0.0 - 1.0)
 
-•
-internal_department - Department of matched researcher
+• internal_department - Department of matched researcher
 
 📄 License
 
-MIT License - feel free to use and modify!
+© 2025 Humber Polytechnic. All rights reserved.
+
+This project was developed at Humber Polytechnic for academic research collaboration purposes.
 
 🤝 Contributing
 
@@ -187,8 +146,5 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 For questions or feedback, please open an issue on GitHub.
 
-
-
-
-© 2025 AcademiaMatch | Powered by Humber Polytechnic & Advanced NLP
+© 2025 AcademiaMatch | Powered by Humber Polytechnic
 
