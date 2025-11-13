@@ -14,6 +14,35 @@ st.set_page_config(
     layout="wide"
 )
 
+# Custom CSS to change sidebar background to off-white
+st.markdown("""
+<style>
+    /* Change sidebar background to off-white */
+    [data-testid="stSidebar"] {
+        background-color: #f5f5f0;
+    }
+    
+    /* Adjust sidebar text color for better contrast on off-white background */
+    [data-testid="stSidebar"] * {
+        color: #262730 !important;
+    }
+    
+    /* Keep input fields and dropdowns readable */
+    [data-testid="stSidebar"] input,
+    [data-testid="stSidebar"] select,
+    [data-testid="stSidebar"] textarea {
+        background-color: white !important;
+        color: #262730 !important;
+    }
+    
+    /* Style the info boxes in sidebar */
+    [data-testid="stSidebar"] .stAlert {
+        background-color: #e8f4f8 !important;
+        color: #262730 !important;
+    }
+</style>
+""", unsafe_allow_html=True)
+
 # Initialize model
 @st.cache_resource
 def load_model():
