@@ -4,7 +4,7 @@
 
 *Bridging Academic Minds Through Intelligent Matching*
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://your-app-url.streamlit.app)
+academiamatch.streamlit.app
 
 ---
 
