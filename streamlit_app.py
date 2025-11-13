@@ -9,7 +9,7 @@ from pathlib import Path
 
 # Page config
 st.set_page_config(
-    page_title="ScholarSync - Academic Collaboration Platform",
+    page_title="AcademiaMatch - Academic Collaboration Platform",
     page_icon="🎓",
     layout="wide"
 )
@@ -225,22 +225,13 @@ logo_base64 = get_logo_base64()
 # Header with branding
 st.markdown("""
 <div style='text-align: center; padding: 2rem 0;'>
-    <h1 style='color: #1f77b4; font-size: 3rem; margin-bottom: 0.5rem;'>ScholarSync</h1>
-    <h3 style='color: #666; font-weight: 400; margin-bottom: 0.5rem;'>Academic Collaboration Platform</h3>
-    <p style='color: #888; font-size: 1.1rem; font-style: italic;'>Bridging Academic Minds Through Intelligent Matching</p>
+    <h1 style='color: #1f77b4; font-size: 3rem; margin-bottom: 0.5rem;'>AcademiaMatch</h1>
+    <h3 style='color: #000000; font-weight: 400; margin-bottom: 0.5rem;'>Academic Collaboration Platform</h3>
+    <p style='color: #000000; font-size: 1.1rem; font-style: italic;'>Bridging Academic Minds Through Intelligent Matching</p>
 </div>
 """, unsafe_allow_html=True)
 
 st.markdown("---")
-
-# Simplified professional About section
-st.markdown("""
-<div style='background-color: #f0f8ff; padding: 1.5rem; border-radius: 10px; border-left: 5px solid #1f77b4; margin-bottom: 2rem;'>
-    <p style='margin: 0; color: #333; font-size: 1.05rem;'>
-    <strong>ScholarSync</strong> matches researchers and faculty members based on their expertise and research interests using AI-powered semantic analysis.
-    </p>
-</div>
-""", unsafe_allow_html=True)
 
 # Sidebar
 with st.sidebar:
@@ -281,11 +272,11 @@ with st.sidebar:
     
     st.markdown("---")
     
-    # About ScholarSync section
-    st.markdown("### 📘 About ScholarSync")
+    # About AcademiaMatch section
+    st.markdown("### 📘 About AcademiaMatch")
     st.info(
-        "**ScholarSync** is an AI-powered platform that connects researchers and faculty members based on semantic similarity of their research interests and expertise.\n\n"
-        "Using advanced natural language processing, ScholarSync:\n\n"
+        "**AcademiaMatch** matches researchers and faculty members based on their expertise and research interests using AI-powered semantic analysis.\n\n"
+        "Using advanced natural language processing, AcademiaMatch:\n\n"
         "• Analyzes research profiles semantically\n\n"
         "• Identifies potential collaborators\n\n"
         "• Facilitates academic partnerships\n\n"
@@ -430,7 +421,7 @@ with tab2:
         st.download_button(
             label="📥 Download Results as CSV",
             data=csv,
-            file_name="scholarsync_matches.csv",
+            file_name="academiamatch_results.csv",
             mime="text/csv",
             use_container_width=True
         )
@@ -441,8 +432,8 @@ with tab2:
 # Footer - Simple and clean
 st.markdown("---")
 st.markdown(
-    "<div style='text-align: center; color: #666; padding: 2rem 0;'>"
-    "© 2025 ScholarSync - Academic Collaboration Platform"
+    "<div style='text-align: center; color: #000000; padding: 2rem 0;'>"
+    "© 2025 AcademiaMatch - Academic Collaboration Platform"
     "</div>",
     unsafe_allow_html=True
 )
