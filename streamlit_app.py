@@ -65,10 +65,17 @@ st.markdown("""
     }
     
     /* Success messages - Humber gold theme */
-    .stSuccess {
+    div[data-testid="stNotification"] div[kind="success"],
+    div[data-baseweb="notification"][kind="success"],
+    .stAlert[data-baseweb="notification"] {
         background-color: #fff8e1 !important;
         color: #1a1a1a !important;
         border-left: 4px solid #F7B500 !important;
+    }
+    
+    /* Override default green success color */
+    div[data-testid="stNotificationContentSuccess"] {
+        background-color: #fff8e1 !important;
     }
     
     /* Slider in sidebar */
@@ -167,7 +174,7 @@ def match_datasets(internal_df, external_df, method='embeddings', top_n=3, thres
     with st.spinner('Calculating similarity scores...'):
         similarity_matrix = cosine_similarity(external_embeddings, internal_embeddings)
     
-    # Extract EXACTLY top_n matches per external item (PROPERLY FIXED)
+    # Extract EXACTLY top_n matches per external item - IGNORE THRESHOLD
     results = []
     for ext_idx, ext_row in external_df.iterrows():
         similarities = similarity_matrix[ext_idx]
@@ -176,24 +183,17 @@ def match_datasets(internal_df, external_df, method='embeddings', top_n=3, thres
         actual_top_n = min(top_n, len(internal_df))
         top_indices = np.argsort(similarities)[-actual_top_n:][::-1]
         
-        # Add ONLY top_n matches per external item
-        matches_added = 0
+        # Add EXACTLY top_n matches per external item - NO THRESHOLD FILTERING
         for int_idx in top_indices:
-            if matches_added >= top_n:
-                break
-                
             int_row = internal_df.iloc[int_idx]
             score = float(similarities[int_idx])
             
-            # Apply threshold filter
-            if score >= threshold:
-                results.append({
-                    'external_name': ext_row['external_name'],
-                    'best_internal_match': int_row['internal_name'],
-                    'similarity_score': score,
-                    'internal_department': int_row['department']
-                })
-                matches_added += 1
+            results.append({
+                'external_name': ext_row['external_name'],
+                'best_internal_match': int_row['internal_name'],
+                'similarity_score': score,
+                'internal_department': int_row['department']
+            })
     
     results_df = pd.DataFrame(results)
     avg_similarity = results_df['similarity_score'].mean() if len(results_df) > 0 else 0.0
